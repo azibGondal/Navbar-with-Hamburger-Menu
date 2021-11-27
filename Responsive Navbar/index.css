@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+#toggle {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  display: none;
+}
+img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 3rem;
+  background: black;
+  position: relative;
+}
+nav:hover {
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.099);
+}
+#services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#services ul {
+  display: flex;
+  gap: 1.4rem;
+}
+#services li {
+  list-style: none;
+}
+
+#services li a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: white;
+  padding: 0.2rem 0.7rem;
+  transition: all 0.3s ease-in;
+  border-radius: 4px;
+}
+#services li a:hover {
+  color: black;
+  background: white;
+}
+#links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#links ul {
+  display: flex;
+  gap: 1.3rem;
+}
+#links li {
+  list-style: none;
+}
+
+#links li a {
+  text-decoration: none;
+}
+
+#links li a i {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+
+  border-radius: 50%;
+}
+
+/* making its responsive */
+@media only screen and (max-width: 880px) {
+  nav {
+    padding: 1.3rem 1rem;
+  }
+
+  #links ul {
+    gap: 0.7rem;
+  }
+  #services ul {
+    gap: 0rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #img-div {
+    padding-left: 0.4rem;
+    transform: translateY(7px);
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.5rem 0 0rem 0;
+  }
+  #services {
+    flex-grow: 1;
+    width: 100%;
+    justify-content: flex-start !important;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+  }
+
+  #services ul {
+    /* height: 0; */
+    flex-direction: column;
+    /* padding: 0.3rem ; */
+    flex-grow: 1;
+    padding-bottom: 0.7rem;
+  }
+
+  #services ul li {
+    padding: 0.2rem 0 0 0.8rem;
+    flex-grow: 1;
+    transition: all 0.5s ease-out;
+  }
+
+  #services ul li :hover {
+    padding-left: 0.5rem;
+  }
+
+  #services ul li a {
+    padding: 0.3rem 0 0.3rem 0;
+    flex-grow: 1;
+    display: block;
+    border-radius: 0px;
+  }
+  #links {
+    display: none;
+  }
+  #toggle {
+    display: block;
+    right: 15px;
+    top: 27px;
+    font-size: 1.7rem;
+  }
+  .toggle-class {
+    height: 160px !important;
+    overflow: hidden !important;
+  }
+}
